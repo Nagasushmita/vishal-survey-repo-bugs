@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Sample Email</title>
+</head>
+<body>
+<div>
+    <h3 th:text="${greeting}"></h3>
+    <p>This is a gentle reminder to take up the below mentioned io.springboot.survey.</p>
+    <p>
+        <b>Survey Details:</b><br>
+        Survey Name: <span th:text="${survey_name}"></span><br>
+        Organiser Name: <span th:text="${org_name}"></span><br>
+        Organiser Email: <span th:text="${org_email}"></span><br>
+        Team Name: <span th:text="${team_name}"></span><br>
+        Click on the link below to take the io.springboot.survey now.<br><br>
+        <a th:href="@{${survey_link}}">Take Survey</a><br>
+        <br>Thanks.</p>
+</div>
+</body>
+<html>
